@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:onboarding_screen/constants.dart';
 import 'package:onboarding_screen/screens/sign_in/sign_in_screen.dart';
