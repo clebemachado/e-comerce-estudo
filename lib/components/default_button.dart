@@ -27,11 +27,11 @@ class DefaultButton extends StatelessWidget {
           //     MaterialStateProperty.all(const EdgeInsets.all(5)),
           backgroundColor: MaterialStateProperty.all(kPrimaryColor),
         ),
-        onPressed: () => press,
+        onPressed: press as void Function()?,
         child: Text(
           text,
           style: TextStyle(
-              fontSize: getProportionateScreenWidth(14), color: Colors.white),
+              fontSize: getProportionateScreenWidth(18), color: Colors.white),
         ),
       ),
     );

@@ -13,19 +13,18 @@ class SizeConfig {
     screenHeight = _mediaQueryData.size.height;
     orientation = _mediaQueryData.orientation;
   }
-
 }
 
 // Obter a altura proporcional de acordo com ao tamanho da tela
-double getProportionateScreenHeight(double inputHeight){
+double getProportionateScreenHeight(double inputHeight) {
   double screenHeight = SizeConfig.screenHeight;
 
   return (inputHeight / 812.0) * screenHeight;
 }
 
 // Obter a altura proporcional de acordo com a largura da tela
-double getProportionateScreenWidth(double inputWidth){
-  double screenWidth = SizeConfig.screenHeight;
+double getProportionateScreenWidth(double inputWidth) {
+  double screenWidth = SizeConfig.screenWidth;
 
   return (inputWidth / 375.0) * screenWidth;
 }
