@@ -14,7 +14,7 @@ class SignInScreen extends StatelessWidget {
           "Sign In",
         ),
       ),
-      body: Body(),
+      body: const Body(),
     );
   }
 }

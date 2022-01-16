@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
+import './components/body.dart';
 
 class ForgotPasswordScreen extends StatelessWidget {
-  const ForgotPasswordScreen({ Key? key }) : super(key: key);
+  static String routeName = "/Forgot_password";
+  const ForgotPasswordScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Forgot Password"),
+      ),
+      body: const Body(),
     );
   }
 }

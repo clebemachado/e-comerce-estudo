@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:onboarding_screen/constants.dart';
 
+import '../../../components/no_account_text.dart';
 import '../../../components/social_card.dart';
 import '../../../size_config.dart';
 import 'sign_form.dart';
@@ -19,7 +19,7 @@ class Body extends StatelessWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SizedBox(height: SizeConfig.screenHeight * 0.04),
+                SizedBox(height: SizeConfig.screenHeight * 0.01),
                 Text(
                   "Welcome Back",
                   style: TextStyle(
@@ -33,7 +33,7 @@ class Body extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: SizeConfig.screenHeight * 0.08),
-                SignForm(),
+                const SignForm(),
                 SizedBox(height: SizeConfig.screenHeight * 0.05),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -53,21 +53,8 @@ class Body extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(20)),
-                Row(
-                  children: [
-                    Text(
-                      "Don't have an account?",
-                      style:
-                          TextStyle(fontSize: getProportionateScreenWidth(16)),
-                    ),
-                    Text(
-                      " Sing Up",
-                      style: TextStyle(
-                          fontSize: getProportionateScreenWidth(16),
-                          color: kPrimaryColor),
-                    ),
-                  ],
-                )
+                const NoAccountText(),
+                SizedBox(height: getProportionateScreenHeight(20)),
               ],
             ),
           ),

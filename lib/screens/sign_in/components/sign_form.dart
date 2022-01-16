@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../forgot_password/forgot_password.dart';
 import '../../../components/default_button.dart';
 import '../../../components/form_error.dart';
 import '../../../components/custom_surfix_icon.dart';
@@ -42,9 +43,13 @@ class _SignFormState extends State<SignForm> {
               ),
               const Text("Remember me"),
               const Spacer(),
-              const Text(
-                "Forgot Password",
-                style: TextStyle(decoration: TextDecoration.underline),
+              GestureDetector(
+                onTap: () => Navigator.pushNamed(
+                    context, ForgotPasswordScreen.routeName),
+                child: const Text(
+                  "Forgot Password",
+                  style: TextStyle(decoration: TextDecoration.underline),
+                ),
               )
             ],
           ),
@@ -90,10 +95,12 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             erros.add(kPassNullError);
           });
+          return "";
         } else if (value.length < 8 && !erros.contains(kShortPassError)) {
           setState(() {
             erros.add(kShortPassError);
           });
+          return "";
         }
         return null;
       },
@@ -127,11 +134,13 @@ class _SignFormState extends State<SignForm> {
           setState(() {
             erros.add(kEmailNullError);
           });
+          return "";
         } else if (!emailValidatorRegExp.hasMatch(value) &&
             !erros.contains(kInvalidEmailError)) {
           setState(() {
             erros.add(kInvalidEmailError);
           });
+          return "";
         }
         return null;
       },
