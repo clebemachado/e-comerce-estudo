@@ -13,7 +13,7 @@ class LoginSucessScreen extends StatelessWidget {
         leading: const SizedBox(),
         title: const Text("Login Success"),
       ),
-      body: Body(),
+      body: const Body(),
     );
   }
 }
