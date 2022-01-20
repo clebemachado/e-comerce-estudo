@@ -3,7 +3,7 @@ import 'package:onboarding_screen/components/social_card.dart';
 import 'package:onboarding_screen/size_config.dart';
 
 import '../../../constants.dart';
-import '../sign_up_form.dart';
+import 'sign_up_form.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);

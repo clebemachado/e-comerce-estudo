@@ -1,9 +1,12 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:onboarding_screen/components/custom_surfix_icon.dart';
 import 'package:onboarding_screen/components/default_button.dart';
+import 'package:onboarding_screen/screens/complete_profile/complete_profile_screen.dart';
 
-import '../../constants.dart';
-import '../../size_config.dart';
+import '../../../constants.dart';
+import '../../../size_config.dart';
 
 class SignUpForm extends StatefulWidget {
   const SignUpForm({Key? key}) : super(key: key);
@@ -47,7 +50,13 @@ class _SignUpFormState extends State<SignUpForm> {
           SizedBox(height: getProportionateScreenHeight(30)),
           buildConfPasswordFormField(),
           SizedBox(height: getProportionateScreenHeight(30)),
-          DefaultButton(press: () {}, text: "Continue"),
+          DefaultButton(
+              press: () {
+                if (_keyForm.currentState!.validate()) {
+                  Navigator.pushNamed(context, CompleteProfile.routeName);
+                }
+              },
+              text: "Continue"),
         ],
       ),
     );
@@ -65,7 +74,7 @@ class _SignUpFormState extends State<SignUpForm> {
         suffixIcon: CustomSufixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
       onChanged: (value) {
-        if (password == confirmPassword) {
+        if (password == value) {
           removeError(error: kMatchPassError);
         }
       },
@@ -93,12 +102,12 @@ class _SignUpFormState extends State<SignUpForm> {
         suffixIcon: CustomSufixIcon(svgIcon: "assets/icons/Lock.svg"),
       ),
       onChanged: (value) {
+        password = value;
         if (value.isNotEmpty && erros.contains(kPassNullError)) {
           removeError(error: kPassNullError);
         } else if (value.length >= 8 && erros.contains(kShortPassError)) {
           removeError(error: kShortPassError);
         }
-        password = value;
       },
       validator: (value) {
         if (value!.isEmpty && !erros.contains(kPassNullError)) {
@@ -124,22 +133,15 @@ class _SignUpFormState extends State<SignUpForm> {
         suffixIcon: CustomSufixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),
       onChanged: (value) {
-        if (value.isNotEmpty && erros.contains(kEmailNullError)) {
-          removeError(error: kEmailNullError);
-        } else if (emailValidatorRegExp.hasMatch(value) &&
-            erros.contains(kInvalidEmailError)) {
-          removeError(error: kInvalidEmailError);
-        }
+        if (value.isNotEmpty && erros.contains(kNameNullError)) {
+          removeError(error: kNameNullError);
+        } 
       },
       validator: (value) {
-        if (value!.isEmpty && !erros.contains(kEmailNullError)) {
-          addError(error: kEmailNullError);
+        if (value!.isEmpty) {
+          addError(error: kNameNullError);
           return "";
-        } else if (!emailValidatorRegExp.hasMatch(value) &&
-            !erros.contains(kInvalidEmailError)) {
-          addError(error: kInvalidEmailError);
-          return "";
-        }
+        } 
         return null;
       },
     );

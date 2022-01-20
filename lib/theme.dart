@@ -19,6 +19,7 @@ InputDecorationTheme inputDecorationTheme() {
     borderSide: const BorderSide(color: kTextColor),
     gapPadding: 10,
   );
+
   return InputDecorationTheme(
     contentPadding: const EdgeInsets.symmetric(horizontal: 42, vertical: 20),
     //floatingLabelBehavior: FloatingLabelBehavior.always,
