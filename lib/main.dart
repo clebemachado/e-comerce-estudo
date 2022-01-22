@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onboarding_screen/routs.dart';
+import 'package:onboarding_screen/screens/complete_profile/complete_profile_screen.dart';
+import 'package:onboarding_screen/size_config.dart';
 import 'package:onboarding_screen/theme.dart';
 
 import 'screens/splash/splash_screen.dart';
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: theme(),
-      initialRoute: SplasScreen.routeName,
+      initialRoute: CompleteProfile.routeName,
       routes: routes,
     );
   }

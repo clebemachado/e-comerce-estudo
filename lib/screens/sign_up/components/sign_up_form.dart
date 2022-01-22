@@ -133,15 +133,22 @@ class _SignUpFormState extends State<SignUpForm> {
         suffixIcon: CustomSufixIcon(svgIcon: "assets/icons/Mail.svg"),
       ),
       onChanged: (value) {
-        if (value.isNotEmpty && erros.contains(kNameNullError)) {
-          removeError(error: kNameNullError);
-        } 
+        if (value.isNotEmpty && erros.contains(kEmailNullError)) {
+          removeError(error: kEmailNullError);
+        } else if (emailValidatorRegExp.hasMatch(value) &&
+            erros.contains(kInvalidEmailError)) {
+          removeError(error: kInvalidEmailError);
+        }
       },
       validator: (value) {
-        if (value!.isEmpty) {
-          addError(error: kNameNullError);
+        if (value!.isEmpty && !erros.contains(kEmailNullError)) {
+          addError(error: kEmailNullError);
           return "";
-        } 
+        } else if (!emailValidatorRegExp.hasMatch(value) &&
+            !erros.contains(kInvalidEmailError)) {
+          addError(error: kInvalidEmailError);
+          return "";
+        }
         return null;
       },
     );
