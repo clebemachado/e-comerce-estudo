@@ -1,4 +1,3 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:onboarding_screen/components/custom_surfix_icon.dart';

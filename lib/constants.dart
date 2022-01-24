@@ -30,3 +30,18 @@ const String kMatchPassError = "Passwords don't match";
 const String kNameNullError = "Please Enter your name";
 const String kPhonePassError = "Please Enter your phone number";
 const String kAddressPassError = "Please Enter your address";
+
+final optInputDecoration = InputDecoration(
+  contentPadding:
+      EdgeInsets.symmetric(vertical: getProportionateScreenWidth(15)),
+  enabledBorder: outlineInputDecoration(),
+  focusedBorder: outlineInputDecoration(),
+  border: outlineInputDecoration(),
+);
+
+OutlineInputBorder outlineInputDecoration() {
+  return OutlineInputBorder(
+  borderRadius: BorderRadius.circular(15),
+  borderSide: const BorderSide(color: kTextColor),
+);
+}
