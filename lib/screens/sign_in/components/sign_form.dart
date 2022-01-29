@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:onboarding_screen/screens/login_success/login_success_screen.dart';
 import '../../forgot_password/forgot_password.dart';
 import '../../../components/default_button.dart';
 import '../../../components/form_error.dart';
@@ -60,6 +61,7 @@ class _SignFormState extends State<SignForm> {
               press: () {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
+                  Navigator.of(context).pushNamed(LoginSucessScreen.routeName);
                 }
               },
               text: "Continue"),
