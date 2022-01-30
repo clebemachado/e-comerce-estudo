@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:onboarding_screen/screens/home/components/categories.dart';
 
-import 'package:onboarding_screen/constants.dart';
-import 'package:onboarding_screen/screens/home/components/icons_btn_with_count.dart';
-import 'package:onboarding_screen/screens/home/components/seach_field.dart';
+import 'package:onboarding_screen/screens/home/components/discount_banner.dart';
+import 'package:onboarding_screen/screens/home/components/home_header.dart';
 import 'package:onboarding_screen/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -16,26 +17,12 @@ class Body extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
+              SizedBox(height: getProportionateScreenWidth(5)),
+              const HomeHeader(),
               SizedBox(height: getProportionateScreenWidth(10)),
-              Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(20)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const SeacherField(),
-                    IconBtnWithCounter(
-                      svgSrc: "assets/icons/Cart Icon.svg",
-                      press: () {},
-                    ),
-                    IconBtnWithCounter(
-                      svgSrc: "assets/icons/Bell.svg",
-                      numOfItems: 3,
-                      press: () {},
-                    )
-                  ],
-                ),
-              )
+              const DiscountBanner(),
+              SizedBox(height: getProportionateScreenWidth(10)),
+              Categories(),
             ],
           ),
         ),
@@ -44,3 +31,28 @@ class Body extends StatelessWidget {
   }
 }
 
+
+
+/*
+...List.generate(
+            categories.length,
+            (index) => CateroryCard(
+              icon: categories[index]["icon"],
+              text: categories[index]["text"],
+              press: () {},
+            ),
+          ),
+
+
+Row(
+      children: categories
+          .map(
+            (e) => CateroryCard(
+              icon: e["icon"],
+              text: e["text"],
+              press: () => () {},
+            ),
+          )
+          .toList(),
+    );
+*/
