@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:onboarding_screen/screens/home/components/categories.dart';
 
+import 'package:onboarding_screen/screens/home/components/categories.dart';
 import 'package:onboarding_screen/screens/home/components/discount_banner.dart';
 import 'package:onboarding_screen/screens/home/components/home_header.dart';
+import 'package:onboarding_screen/screens/home/components/special_offers.dart';
 import 'package:onboarding_screen/size_config.dart';
 
 class Body extends StatelessWidget {
@@ -19,10 +19,12 @@ class Body extends StatelessWidget {
             children: [
               SizedBox(height: getProportionateScreenWidth(5)),
               const HomeHeader(),
-              SizedBox(height: getProportionateScreenWidth(10)),
+              SizedBox(height: getProportionateScreenWidth(20)),
               const DiscountBanner(),
-              SizedBox(height: getProportionateScreenWidth(10)),
+              SizedBox(height: getProportionateScreenWidth(20)),
               Categories(),
+              SizedBox(height: getProportionateScreenWidth(20)),
+              const SpecialOffers()
             ],
           ),
         ),
@@ -30,6 +32,9 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
+
 
 
 
