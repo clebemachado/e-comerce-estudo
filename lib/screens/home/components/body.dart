@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
+import 'package:onboarding_screen/models/Product.dart';
 import 'package:onboarding_screen/screens/home/components/categories.dart';
 import 'package:onboarding_screen/screens/home/components/discount_banner.dart';
 import 'package:onboarding_screen/screens/home/components/home_header.dart';
+import 'package:onboarding_screen/screens/home/components/popular_products.dart';
+import 'package:onboarding_screen/screens/home/components/section_title.dart';
 import 'package:onboarding_screen/screens/home/components/special_offers.dart';
 import 'package:onboarding_screen/size_config.dart';
+
+import '../../../components/product_card.dart';
 
 class Body extends StatelessWidget {
   const Body({Key? key}) : super(key: key);
@@ -24,7 +29,10 @@ class Body extends StatelessWidget {
               SizedBox(height: getProportionateScreenWidth(20)),
               Categories(),
               SizedBox(height: getProportionateScreenWidth(20)),
-              const SpecialOffers()
+              const SpecialOffers(),
+              SizedBox(height: getProportionateScreenWidth(20)),
+              const PopularProduct(),
+              SizedBox(height: getProportionateScreenWidth(20)),
             ],
           ),
         ),
@@ -32,6 +40,8 @@ class Body extends StatelessWidget {
     );
   }
 }
+
+
 
 
 
