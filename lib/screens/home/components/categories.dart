@@ -7,7 +7,7 @@ import '../../../size_config.dart';
 class Categories extends StatelessWidget {
   Categories({Key? key}) : super(key: key);
 
-  List<Map<String, dynamic>> categories = [
+  final List<Map<String, dynamic>> categories = [
     {"icon": "assets/icons/Flash Icon.svg", "text": "Flash Deal"},
     {"icon": "assets/icons/Bill Icon.svg", "text": "Bill"},
     {"icon": "assets/icons/Game Icon.svg", "text": "Game"},

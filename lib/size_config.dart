@@ -6,12 +6,14 @@ class SizeConfig {
   static late double screenHeight;
   static late double defaultSize;
   static late Orientation orientation;
+  static late double appBarHeight;
 
   void init(BuildContext context) {
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = _mediaQueryData.size.height;
     orientation = _mediaQueryData.orientation;
+    appBarHeight = kToolbarHeight;
   }
 }
 
