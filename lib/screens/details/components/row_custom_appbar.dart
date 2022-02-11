@@ -24,7 +24,7 @@ class RowCustomAppBar extends StatelessWidget {
             RoundedIconButton(
               icon: Icons.arrow_back_ios_new,
               press: () {
-                ("HI");
+                Navigator.of(context).pop();
               },
             ),
             Container(

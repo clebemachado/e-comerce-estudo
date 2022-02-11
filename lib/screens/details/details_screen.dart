@@ -21,7 +21,7 @@ class DetailScreen extends StatelessWidget {
           rating: argurments.product.rating,
         ),
       ),
-      body: const Body(),
+      body: Body(product: argurments.product,),
     );
   }
 }
