@@ -45,7 +45,7 @@
               
 
 
-## Features - Telas
+## Features Desenvolvidas - Telas
 
 - [x] Tela de splash com container animado
 - [x] Cadastro de usuário
@@ -53,6 +53,14 @@
 - [x] Tela para mudar password
 - [x] Tela home para listagem de produtos
 - [x] Tela de detalhes dos prdutos
+
+
+## Features Futuras
+
+- [ ] Testes dos widgets
+- [ ] Documentação utilizando o [Doc_Widget](https://pub.dev/packages/doc_widget)
+- [ ] Conectar em uma api fake de produtos
+- [ ] Aplicar MVVM com api
 
 ## Exemplo final
 
