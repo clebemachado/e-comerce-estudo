@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:onboarding_screen/models/product_.dart';
+import 'package:onboarding_screen/models/Product_.dart';
 import 'package:onboarding_screen/screens/details/components/body.dart';
 import 'components/custom_app_bar.dart';
 import 'components/row_custom_appbar.dart';

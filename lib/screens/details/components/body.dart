@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:onboarding_screen/components/default_button.dart';
 
 import 'package:onboarding_screen/constants.dart';
-import 'package:onboarding_screen/models/product_.dart';
+import 'package:onboarding_screen/models/Product_.dart';
 import 'package:onboarding_screen/screens/details/components/colors_dots.dart';
 import 'package:onboarding_screen/screens/details/components/product_description.dart';
 import 'package:onboarding_screen/screens/details/components/product_image.dart';
 import 'package:onboarding_screen/size_config.dart';
 
-import 'top_roundedContainer.dart';
+import 'top_rounded_container.dart';
 
 class Body extends StatelessWidget {
   const Body({

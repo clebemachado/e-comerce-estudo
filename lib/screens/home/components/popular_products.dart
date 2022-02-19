@@ -3,7 +3,7 @@ import 'package:onboarding_screen/screens/details/details_screen.dart';
 import 'package:onboarding_screen/screens/home/components/section_title.dart';
 
 import '../../../components/product_card.dart';
-import '../../../models/product_.dart';
+import '../../../models/Product_.dart';
 import '../../../size_config.dart';
 
 class PopularProduct extends StatelessWidget {
