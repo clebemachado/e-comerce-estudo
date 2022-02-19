@@ -71,9 +71,17 @@
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Flutter - 2.10](https://flutter.dev/?), editor de código [VSCode](https://code.visualstudio.com/), [Java - 8](https://www.oracle.com/br/java/technologies/javase/javase8-archive-downloads.html) e o [android studio](https://developer.android.com/studio?hl=pt&gclid=CjwKCAiAx8KQBhAGEiwAD3EiPyRMUHovtdetW1oAOeMS61SP57FvEBMJvu2hUdKwX3F05DjY4kKuZRoCMYoQAvD_BwE&gclsrc=aw.ds)
 
-Depois de baixado execute no terminale run flutter pub get 
+### Clone o aplicativo
 
-Por fim, emule a aplicação.
+```jsx
+git clone https://github.com/clebemachado/consumo-app.git
+```
+
+### Instale as dependências
+
+```jsx
+flutter pub get
+```
 
 ### Agradecimentos
 
